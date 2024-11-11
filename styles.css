@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.side-menu {
+    width: 100px;
+    background: #0000003f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    overflow-y: auto;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+    position: relative; /* Needed for absolute positioning of text */
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center align items */
+}
+
+.menu-text {
+    display: none; /* Hide the text by default */
+    margin-left: 10px; /* Space between icon and text */
+    transition: all 0.3s ease; /* Transition for smooth effect */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-10px); /* Start slightly above */
+}
+
+.side-menu ul li a:hover .menu-text {
+    display: inline; /* Show text on hover */
+    opacity: 1; /* Fade in the text */
+    transform: translateY(0); /* Move to original position */
+    background-color: rgb(128, 128, 128); /* Optional background color */
+}
+
+.side-menu ul li a:hover {
+    color: rgba(0, 0, 0, 0.753);
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 220px; 
+    padding: 20px;
+}
+
+.sections {
+    margin-top: 20px;
+}
+
+section {
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;  /* Set the desired width */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+.icons {
+    width: 30px;  /* Set the desired width */
+}
