@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #000000; /* Light background for contrast */
 }
 
 .container {
@@ -13,13 +15,18 @@ body {
 }
 
 .side-menu {
-    width: 100px;
-    background: #0000003f;
+    width: 70px;
+    background: #7a7878; /* Darker background */
     position: fixed;
     top: 0;
     left: 0;
     height: 100%; 
-    overflow-y: auto;
+    overflow: hidden;
+    transition: width 0.3s; /* Smooth width transition */
+}
+
+.side-menu:hover {
+    width: 220px; /* Expand width on hover */
 }
 
 .side-menu ul {
@@ -29,7 +36,6 @@ body {
 
 .side-menu ul li {
     margin: 10px 0;
-    position: relative; /* Needed for absolute positioning of text */
 }
 
 .side-menu ul li a {
@@ -37,30 +43,22 @@ body {
     text-decoration: none;
     display: flex; /* Use flex to align icon and text */
     align-items: center; /* Center align items */
-}
-
-.menu-text {
-    display: none; /* Hide the text by default */
-    margin-left: 10px; /* Space between icon and text */
-    transition: all 0.3s ease; /* Transition for smooth effect */
-    opacity: 0; /* Start with opacity 0 */
-    transform: translateY(-10px); /* Start slightly above */
-}
-
-.side-menu ul li a:hover .menu-text {
-    display: inline; /* Show text on hover */
-    opacity: 1; /* Fade in the text */
-    transform: translateY(0); /* Move to original position */
-    background-color: rgb(128, 128, 128); /* Optional background color */
+    padding: 10px; /* Add padding for better spacing */
+    transition: background 0.3s; /* Smooth background transition */
 }
 
 .side-menu ul li a:hover {
-    color: rgba(0, 0, 0, 0.753);
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+.menu-text {
+    display: inline; /* Show the text */
+    margin-left: 10px; /* Space between icon and text */
+    opacity: 1; /* Always visible */
 }
 
 .content {
-    margin-left: 220px; 
+    margin-left: 120px; /* Adjusted for the expanded sidebar */
     padding: 20px;
 }
 
@@ -73,6 +71,7 @@ section {
     padding: 20px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
+    background: white; /* White background for sections */
 }
 
 h1 {
@@ -80,10 +79,25 @@ h1 {
 }
 
 .logo {
-    width: 100px;  /* Set the desired width */
+    width:  60px;  /* Set the desired width */
     height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the logo */
+    
 }
 
 .icons {
     width: 30px;  /* Set the desired width */
+    height: 30px;
+    padding-right: 1px; /* Maintain aspect ratio for icons */
+}
+#section1 {
+    background-color: black;
+    border-color: black;
+    width: auto;
+}
+h1 {
+color: rgb(255, 255, 255);
+font-family:monospace;
+font-style: unset;
+font-size: 50px;
 }
