@@ -16,7 +16,7 @@ body {
 
 .side-menu {
     width: 70px;
-    background: #7a7878; /* Darker background */
+    background: rgb(167, 166, 161); /* Darker background */
     position: fixed;
     top: 0;
     left: 0;
@@ -36,6 +36,7 @@ body {
 
 .side-menu ul li {
     margin: 10px 0;
+    
 }
 
 .side-menu ul li a {
@@ -54,6 +55,7 @@ body {
 .menu-text {
     display: inline; /* Show the text */
     margin-left: 10px; /* Space between icon and text */
+    color: black;
     opacity: 1; /* Always visible */
 }
 

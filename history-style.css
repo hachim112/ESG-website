@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #333;
+}
+
+.header-logo {
+    max-width: 100%;
+    width: 69px;
+    height: auto;
+}
+
+/* Side Menu */
+.side-menu {
+    width: 70px;
+    background: rgb(167, 166, 161);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.side-menu:hover {
+    width: 220px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.menu-text {
+    display: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.side-menu:hover .menu-text {
+    display: inline-block;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    margin-left: 80px; /* Adjust based on side menu width */
+    color: #ddd;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.intro-image {
+    flex: 1;
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 50%;
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text h2 {
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Timeline */
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #1c1c1c;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 33%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* News Section */
+.news ul {
+    list-style: square;
+    margin: 20px 0;
+    padding: 0;
+    color: #fff;
+}
+
+.news ul li {
+    margin: 10px 0;
+}
+
+
