@@ -1,28 +1,31 @@
 * {
     box-sizing: border-box;
-
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000; /* Light background for contrast */
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for contrast */
+    color: #ffffff; /* White text color */
+    overflow: hidden; /* Prevent body overflow */
 }
 
 .container {
     display: flex;
+    height: 100vh; /* Full viewport height */
 }
 
 .side-menu {
     width: 70px;
-    background: rgb(167, 166, 161); /* Darker background */
+    background: #1e1e1e; /* Darker background for the side menu */
     position: fixed;
     top: 0;
     left: 0;
     height: 100%; 
     overflow: hidden;
     transition: width 0.3s; /* Smooth width transition */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .side-menu:hover {
@@ -31,75 +34,121 @@ body {
 
 .side-menu ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .side-menu ul li {
     margin: 10px 0;
-    
 }
 
 .side-menu ul li a {
     color: white;
-    text-decoration: none;
+ text-decoration: none;
     display: flex; /* Use flex to align icon and text */
     align-items: center; /* Center align items */
     padding: 10px; /* Add padding for better spacing */
-    transition: background 0.3s; /* Smooth background transition */
+    transition: background 0.3s, padding-left 0.3s; /* Smooth background and padding transition */
 }
 
 .side-menu ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    padding-left: 15px; /* Add padding on hover for effect */
 }
 
 .menu-text {
     display: inline; /* Show the text */
     margin-left: 10px; /* Space between icon and text */
-    color: black;
-    opacity: 1; /* Always visible */
 }
 
 .content {
-    margin-left: 120px; /* Adjusted for the expanded sidebar */
-    padding: 20px;
+    margin-left: 70px; /* Adjusted for the sidebar width */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    padding: 20px; /* Add padding for content */
 }
 
 .sections {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    height: 100%; /* Full height for sections */
 }
 
-section {
-    height: 600px;
+.section {
+    background: #1c1c1c; /* Dark background for sections */
+    border: 1px solid #444; /* Light border for contrast */
+    border-radius: 8px; /* Rounded corners */
     padding: 20px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    background: white; /* White background for sections */
+    flex: 1; /* Allow sections to grow and fill space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    min-height: 100vh; /* Ensure each section covers the full viewport height */
+    transition: background 0.3s; /* Smooth background transition */
 }
 
-h1 {
-    margin-bottom: 20px;
+.section:hover {
+    background: #2a2a2a; /* Slightly lighter background on hover */
+}
+
+h2 {
+    color: #ffffff; /* White color for section titles */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff0000; /* Red background for buttons */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background and transform transition */
+}
+
+button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .logo {
-    width:  60px;  /* Set the desired width */
-    height: auto;  /* Maintain aspect ratio */
+    width: 60px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Space below the logo */
-    
 }
 
 .icons {
-    width: 30px;  /* Set the desired width */
+    width: 30px; /* Set the desired width */
     height: 30px;
     padding-right: 1px; /* Maintain aspect ratio for icons */
 }
-#section1 {
-    background-color: black;
-    border-color: black;
-    width: auto;
+
+#section4 {
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: white; /* Text color for better contrast */
+    display: flex; /* Optional: for centering content */
+    align-items: center; /* Optional: vertically centers content */
+    justify-content: center; /* Optional: horizontally centers content */
+    text-align: center; /* Optional: centers text */
+    min-height: 100vh; /* Ensure it covers full height */
+    position: relative; /* For positioning child elements */
 }
-h1 {
-color: rgb(255, 255, 255);
-font-family:monospace;
-font-style: unset;
-font-size: 50px;
+
+#section4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1; /* Ensure overlay is above background */
+}
+
+#section4 h2, #section4 p {
+    position: relative; /* Position relative to overlay */
+    z-index: 2; /* Ensure text is above overlay */
 }
