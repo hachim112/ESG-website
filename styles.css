@@ -150,3 +150,51 @@ button:hover {
     position: relative;
     z-index: 2;
 }
+
+/* General Section Styling */
+#section0 {
+    background: linear-gradient(to bottom, #000000, #333333); /* Black to dark grey gradient */
+    color: #ffffff; /* White text for strong contrast */
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    font-family: 'Arial Black', sans-serif;
+    border-top: 3px solid #ffffff; /* Thin white borders for a sharp sporty edge */
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Heading Styling */
+#section0 h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Soft white glow for emphasis */
+}
+
+/* Paragraph Styling */
+#section0 p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Subtle shadow for elegance */
+}
+
+/* Decorative Football Element */
+#section0::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Football_iu_1996.jpg') no-repeat center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    opacity: 0.6; /* Faint grey football icon for a classy touch */
+    filter: grayscale(100%); /* Converts the football image to grayscale */
+}
+
