@@ -11,18 +11,13 @@ body {
     overflow: hidden;
 }
 
-.container {
-    height: 100vh;
-}
 
 .side-menu {
-    width: 50px;
+    width: 80px;
     background: #777777;
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%; 
-    overflow: hidden;
+   
+    height: 100%;
     transition: width 0.3s;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -32,13 +27,11 @@ body {
 }
 
 .side-menu ul {
-    list-style-type: none;
+    list-style-type: armenian;
     padding: 20px 0;
 }
 
-.side-menu ul li {
-    margin: 10px 0;
-}
+
 
 .side-menu ul li a {
     color: white;
@@ -46,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    transition: background 0.3s, padding-left 0.3s;
+    transition:  0.3s, padding-left 0.3s;
 }
 
 .side-menu ul li a:hover {
@@ -56,6 +49,12 @@ body {
 
 .menu-text {
     margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.side-menu:hover .menu-text {
+    opacity: 1;
 }
 
 .content {
@@ -111,15 +110,14 @@ button:hover {
 }
 
 .logo {
-    width: 50px;
+    width: 60px;
     height: auto;
     margin-bottom: 20px;
 }
 
 .icons {
-    width: 30px;
-    height: 30px;
-    padding-right: 1px;
+    width: 50px;
+    padding-left: 20px;
 }
 
 #section4 {
@@ -153,26 +151,28 @@ button:hover {
 
 /* General Section Styling */
 #section0 {
-    background: linear-gradient(to bottom, #000000, #333333); /* Black to dark grey gradient */
-    color: #ffffff; /* White text for strong contrast */
+    background-image: url('images/download.png');
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    position: relative;
-    font-family: 'Arial Black', sans-serif;
-    border-top: 3px solid #ffffff; /* Thin white borders for a sharp sporty edge */
-    border-bottom: 3px solid #ffffff;
+    min-height: 100vh;
+    transition: background 0.3s;
 }
 
-/* Heading Styling */
+#section0:hover {
+    background-image: url('images/download.png');
+}
+
 #section0 h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Soft white glow for emphasis */
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-/* Paragraph Styling */
 #section0 p {
     font-size: 1.5rem;
     line-height: 1.8;
@@ -180,21 +180,9 @@ button:hover {
     margin: 0 auto;
     width: 80%;
     max-width: 800px;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Subtle shadow for elegance */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
 }
 
-/* Decorative Football Element */
-#section0::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Football_iu_1996.jpg') no-repeat center;
-    background-size: contain;
-    width: 80px;
-    height: 80px;
-    opacity: 0.6; /* Faint grey football icon for a classy touch */
-    filter: grayscale(100%); /* Converts the football image to grayscale */
+#section0 img {
+    border-radius: 20px;
 }
-
