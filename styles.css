@@ -101,6 +101,7 @@ h1, h2 {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -108,6 +109,7 @@ p {
     line-height: 1.6;
     max-width: 600px;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -121,6 +123,19 @@ p {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent 30%);
+    animation: rotate 4s linear infinite;
 }
 
 .btn:hover {
@@ -140,109 +155,204 @@ p {
     height: auto;
 }
 
-/* Section-specific styles and animations */
+.logo-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Section 0 - Football Field Background */
 #section0 {
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-    animation: zoomBackground 10s ease infinite;
+    position: relative;
+    background-image: url('images/home.jpg'); /* Background image for section 0 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
+/* Blur effect for section 0 background */
+#section0::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/home.jpg'); /* Same background image for the blur */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    transition: transform 0.2s ease-out;
+}
+
+/* Text elements above the blurred background */
+#section0 h2, #section0 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section 1 - Football Team News Section */
 #section1 {
-    background: url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
-    animation: zoomBackground 16s ease infinite;
+    position: relative;
+    background-image: url('images/backgroundnews.jpg'); /* Background image for news section */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
+/* Blur effect for the background */
+#section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backgroundnews.jpg'); /* Same background image for the blur */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    transition: transform 0.2s ease-out;
+}
+
+/* Text elements above the blurred background */
+#section1 h2, #section1 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section 2 - Football Shop Section */
 #section2 {
-    background: url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
-    animation: zoomslideBackground 16s ease infinite;
+    position: relative;
+    background-image: url('images/storebackground.png'); /* Background image for shop section */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
+/* Blur effect for the background */
+#section2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/storebackground.png'); /* Same background image for the blur */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    transition: transform 0.2s ease-out;
+}
+
+/* Text elements above the blurred background */
+#section2 h2, #section2 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section 3 - Football History Section */
 #section3 {
-    background: url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
-    animation: zoomBackground 16s ease infinite;
+    position: relative;
+    background-image: url('images/backgroundhistory.png'); /* Background image for history section */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
+/* Blur effect for the background */
+#section3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backgroundhistory.png'); /* Same background image for the blur */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    transition: transform 0.2s ease-out;
+}
+
+/* Text elements above the blurred background */
+#section3 h2, #section3 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section 4 - More Information Section */
 #section4 {
-    background: url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
-    animation: zoomBackground 16s ease infinite;
+    position: relative;
+    background-image: url('images/morebackground.png'); /* Background image for more information section */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Blur effect for the background */
+#section4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/morebackground.png'); /* Same background image for the blur */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: 0;
+    transition: transform 0.2s ease-out;
 }
 
-@keyframes zoomBackground {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-@keyframes slideBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-}
-
-@keyframes rotateBackground {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes pulseBackground {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .side-menu {
-        width: 60px;
-    }
-
-    .side-menu:hover {
-        width: 180px;
-    }
-
-    .content {
-        margin-left: 60px;
-        width: calc(100% - 60px);
-    }
-
-    h1, h2 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .side-menu {
-        width: 50px;
-    }
-
-    .side-menu:hover {
-        width: 150px;
-    }
-
-    .content {
-        margin-left: 50px;
-        width: calc(100% - 50px);
-    }
-
-    h1, h2 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 8px 16px;
-    }
+/* Text elements above the blurred background */
+#section4 h2, #section4 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }

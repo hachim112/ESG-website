@@ -1,0 +1,126 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+
+}
+.container {
+    display: flex;
+}
+/* Side Menu */
+.side-menu {
+    width: 80px;
+    background: #1a1a1a;
+    position: fixed;
+    height: 100vh;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.side-menu:hover {
+    width: 220px;
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 50px;  
+    height: auto;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+
+.menu-text {
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.side-menu:hover .menu-text {
+    opacity: 1;
+}
+
+/* Fix the size of the icons */
+.side-menu ul li a img {
+    width: 30px; /* Set the icon size */
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 80px; /* Adjust content width */
+}
+
+.news {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.news-img img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-content b {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.news:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+

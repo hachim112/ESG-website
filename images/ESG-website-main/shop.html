@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Club Shop</title>
+  <link rel="stylesheet" href="shop-style.css">
+  <script src="shop.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    
+    
+  </header>
+  <nav class="side-menu" id="sideMenu">
+    <img src="images/logo.png" class="logo">
+    <ul>
+        <li>
+            <a href="index.html" >
+                <img src="images/home.png" class="icons">
+                <span class="menu-text" onclick="">HOME</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section2">
+                <img src="images/newspaper.png" class="icons">
+                <span class="menu-text">NEWS</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section3">
+                <img src="images/shop.png" class="icons">
+                <span class="menu-text">SHOP</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section4">
+                <img src="images/history.png" class="icons">
+                <span class="menu-text">HISTORY</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section5">
+                <img src="images/more.png" class="icons">
+                <span class="menu-text">MORE</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+  <main>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3 id="popup-title"></h3>
+        <img id="popup-image" src="" alt="Product Image">
+        <p id="popup-price"></p>
+        <div class="size-selector">
+          <label for="size">Select Size:</label>
+          <select id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+        <div class="popup-buttons">
+          <button id="add-to-cart">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            Add to Cart
+          </button>
+          <button id="buy-now">
+            <!-- <i class="fas fa-bolt"></i> -->
+            <span>Buy Now</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="checkout-section" class="checkout-section">
+      <div class="checkout-content">
+        <!-- Progress Bar -->
+        <div class="checkout-progress">
+          <div class="progress-step active">Cart</div>
+          <div class="progress-step">Info</div>
+          <div class="progress-step">Payment</div>
+          <div class="progress-step">Confirm</div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+          <h3>Shopping Cart</h3>
+          <div id="cart-items"></div>
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-amount">$0.00</span>
+          </div>
+          <div class="shipping-notice">
+            <i class="fas fa-truck"></i>
+            Free shipping on orders over $50!
+          </div>
+        </div>
+
+        <!-- Personal Information Form -->
+        <form id="personal-info" class="checkout-form">
+          <h3>Personal Information</h3>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <textarea placeholder="Delivery Address" required></textarea>
+          <label>
+            <input type="checkbox"> Save information for future use
+          </label>
+        </form>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+          <h3>Payment Method</h3>
+          <div class="payment-options">
+            <img src="images/visa.png" alt="Visa">
+            <img src="images/mastercard.png" alt="MasterCard">
+            <img src="images/paypal.png" alt="PayPal">
+          </div>
+          <div class="secure-badge">
+            <i class="fas fa-lock"></i> Secure Payment
+          </div>
+        </div>
+
+        <!-- Delivery Options -->
+        <div class="delivery-options">
+          <h3>Delivery Method</h3>
+          <select id="delivery-method">
+            <option value="standard">Standard Delivery (3-5 days) - Free</option>
+            <option value="express">Express Delivery (1-2 days) - $10.00</option>
+          </select>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="checkout-actions">
+          <button class="continue-shopping">Continue Shopping</button>
+          <button class="complete-purchase">Complete Purchase</button>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support-section">
+          Need help? <a href="#" class="contact-support">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="shop">
+      <h2> Welcome to  Club Shop</h2>
+      <div class="products">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="images/jersey.jpg" alt="Club Jersey">
+          <div class="product-info">
+            <h3>Club Jersey</h3>
+            <br>
+            <p>$50.00</p>
+          </div>
+          <button>voir plus</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="images/jerseyy.jpg" alt="Club Flag">
+          <h3>2nd Jersey</h3>
+          <p>$50.00</p>
+          <button>voir plus</button>
+        </div>
+
+       
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="images/jerseyt.jpg" alt=" 2nd Jersey">
+          <h3>3rd Jersey</h3>
+          <p>$40.00</p>
+          <button>voir plus</button>
+        </div>
+
+       
+      </div>
+      
+      <!-- Second Row -->
+      <div class="products">
+        <!-- Product 4: Goalkeeper Jersey -->
+        <div class="product-card">
+          <img src="images/goalkeeper.jpg" alt="Goalkeeper Jersey">
+          <h3>Goalkeeper Jersey</h3>
+          <p>$30.00</p>
+          <button>voir plus</button>
+        </div>
+        <!-- Product 5: Club Flag -->
+        <div class="product-card">
+          <img src="images/scarf.jpg" alt="Club Scarf">
+          <h3>Club Scarf</h3>
+          <p>$15.00</p>
+          <button>voir plus</button>
+        </div>
+        <!-- Product 6: Training Jersey -->
+        <div class="product-card">
+          <img src="images/hat.jpg" alt="Club Hat">
+          <h3>Club Hat</h3>
+          <p>$20.00</p>
+          <button>voir plus</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Football Club Shop. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
