@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calendrier des Matchs de Football</title>
+    
+    <style>
+       /* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Fond noir pour le contraste */
+    color: #fff; /* Texte en blanc */
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222; /* Légèrement plus clair que le fond de la page */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+.match-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid rgb(187, 187, 187); /* Ajout de la bordure blanche */
+}
+
+/* Effet au survol de l'image */
+.match-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.side-menu {
+    width: 80px;
+    min-width: 80px;
+    background: #1a1a1a;
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.side-menu:hover {
+    width: 220px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+
+.menu-text {
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.side-menu:hover .menu-text {
+    opacity: 1;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.icons {
+    width: 30px;
+    height: auto;
+}
+
+/* Sub-Menu */
+.more-menu {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align submenu to the right */
+    background: #1a1a1a;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 180px;
+    z-index: 2000;
+}
+
+.more-menu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sub-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .match-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="side-menu" id="sideMenu">
+        <img src="images/logo.png" class="logo" alt="ESG Team Logo">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="images/home.png" class="icons" alt="">
+                    <span class="menu-text">HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="news.html">
+                    <img src="images/newspaper.png" class="icons" alt="">
+                    <span class="menu-text">NEWS</span>
+                </a>
+            </li>
+            <li>
+                <a href="shop.html">
+                    <img src="images/shop.png" class="icons" alt="">
+                    <span class="menu-text">SHOP</span>
+                </a>
+            </li>
+            <li>
+                <a href="history.html">
+                    <img src="images/history.png" class="icons" alt="">
+                    <span class="menu-text">HISTORY</span>
+                </a>
+            </li>
+            <li class="more-menu">
+                <a href="#section4">
+                    <img src="images/more.png" class="icons" alt="">
+                    <span class="menu-text">MORE</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="joueurs.html">Players</a></li>
+                    <li><a href="match.html">Calendar</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Calendrier des Matchs de ESG</h1>
+
+        <table>
+            <tbody>
+
+
+                <!-- Match 1 -->
+                <tr>
+                    <td colspan="5">
+                        <img src="images/wazy.jpg" class="match-image" id="match-image-1" alt="Match PSG vs Marseille">
+                    </td>
+                </tr>
+
+                <!-- Match 2 -->
+                <tr>
+                    <td colspan="5">
+                        <img src="images/asam.jpg" class="match-image" id="match-image-2" alt="Match Lyon vs Monaco">
+                    </td>
+                </tr>
+
+                <!-- Match 3 -->
+                <tr>
+                    <td colspan="5">
+                        <img src="images/cbm.jpg" class="match-image" id="match-image-3" alt="Match Lille vs Bordeaux">
+                    </td>
+                </tr>
+
+                <!-- Match 4 -->
+                <tr>
+                    <td colspan="5">
+                        <img src="images/crbaf.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+                    </td>
+                </tr>
+                <!-- Match 5 -->
+                <tr>
+                  <td colspan="5">
+                      <img src="images/irbs.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+                  </td>
+                 </tr>
+              <!-- Match 6 -->
+              <tr>
+                <td colspan="5">
+                    <img src="images/jbak.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+                </td>
+            </tr>
+            <!-- Match 7 -->
+            <tr>
+              <td colspan="5">
+                  <img src="images/nrbb.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+              </td>
+          </tr>
+          <!-- Match 8 -->
+          <tr>
+            <td colspan="5">
+                <img src="images/nrbt.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+            </td>
+        </tr>
+        <!-- Match 9 -->
+        <tr>
+          <td colspan="5">
+              <img src="images/usfc.jpg" class="match-image" id="match-image-4" alt="Match Nice vs Rennes">
+          </td>
+      </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

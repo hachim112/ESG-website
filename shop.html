@@ -9,47 +9,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    
-    
-  </header>
+  
   <nav class="side-menu" id="sideMenu">
-    <img src="images/logo.png" class="logo">
+    <img src="images/logo.png" class="logo" alt="Logo">
     <ul>
         <li>
             <a href="index.html" >
-                <img src="images/home.png" class="icons">
-                <span class="menu-text" onclick="">HOME</span>
+                <img src="images/home.png" class="icons" alt="Home">
+                <span class="menu-text">HOME</span>
             </a>
         </li>
         <li>
-            <a href="#section2">
-                <img src="images/newspaper.png" class="icons">
+            <a href="#news">
+                <img src="images/newspaper.png" class="icons" alt="News">
                 <span class="menu-text">NEWS</span>
             </a>
         </li>
         <li>
-            <a href="#section3">
-                <img src="images/shop.png" class="icons">
+            <a href="#shop">
+                <img src="images/shop.png" class="icons" alt="Shop">
                 <span class="menu-text">SHOP</span>
             </a>
         </li>
         <li>
-            <a href="#section4">
-                <img src="images/history.png" class="icons">
+            <a href="#history">
+                <img src="images/history.png" class="icons" alt="History">
                 <span class="menu-text">HISTORY</span>
             </a>
         </li>
         <li>
-            <a href="#section5">
-                <img src="images/more.png" class="icons">
+            <a href="#more">
+                <img src="images/more.png" class="icons" alt="More">
                 <span class="menu-text">MORE</span>
             </a>
         </li>
     </ul>
 </nav>
 
-  <main>
+
+
+<main>
     <div id="popup" class="popup">
       <div class="popup-content">
         <span class="close-popup">&times;</span>
@@ -209,8 +208,118 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2024 Football Club Shop. All Rights Reserved.</p>
+  <footer class="modern-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ESG Club Shop</h4>
+        <p>Official store of ESG Football Club. Get your authentic team merchandise and show your support for the club.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Club Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Club Home</a></li>
+          <li><a href="match.html">Match Schedule</a></li>
+          <li><a href="joueurs.html">Players</a></li>
+          <li><a href="news.html">Club News</a></li>
+          <li><a href="history.html">Club History</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Fan Zone</h4>
+        <ul class="footer-links">
+          <li><a href="#membership">Fan Membership</a></li>
+          <li><a href="#tickets">Match Tickets</a></li>
+          <li><a href="#size-guide">Jersey Size Guide</a></li>
+          <li><a href="#shipping">Shipping Info</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Join ESG Family</h4>
+        <p>Subscribe for exclusive offers and club updates</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your Email Address">
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="payment-methods">
+          <span>Secure Payment Methods:</span>
+          <div class="payment-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2024 ESG Football Club. All Rights Reserved.</p>
+      </div>
+      <div class="footer-extra-links">
+        <a href="#privacy">Privacy Policy</a>
+        <span class="separator">|</span>
+        <a href="#terms">Terms of Service</a>
+        <span class="separator">|</span>
+        <a href="#returns">Returns Policy</a>
+      </div>
+    </div>
   </footer>
+
+  <div id="buy-now-popup" class="buy-now-popup">
+    <div class="buy-now-content">
+      <span class="close-buy-now">&times;</span>
+      <h3>Complete Your Purchase</h3>
+      
+      <div class="buy-now-form">
+        <div class="form-section personal-info">
+          <h4>Personal Information</h4>
+          <input type="text" id="full-name" placeholder="Full Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <textarea id="address" placeholder="Delivery Address" required></textarea>
+        </div>
+
+        <div class="form-section payment-info">
+          <h4>Payment Details</h4>
+          <div class="card-number-input">
+            <input type="text" id="card-number" placeholder="Card Number" maxlength="16" required>
+            <img src="images/card.jpg" alt="Accepted Cards" class="card-icons">
+          </div>
+          <div class="card-details">
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+            <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+          </div>
+        </div>
+
+        <div class="form-section order-summary">
+          <h4>Order Summary</h4>
+          <div class="order-details">
+            <img id="buy-now-product-image" src="" alt="Product">
+            <div class="product-details">
+              <p id="buy-now-product-name"></p>
+              <p id="buy-now-product-price"></p>
+            </div>
+          </div>
+        </div>
+
+        <button id="confirm-purchase" class="confirm-purchase-btn">
+          Confirm Purchase
+          <i class="fas fa-lock"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

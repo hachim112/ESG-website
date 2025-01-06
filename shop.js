@@ -110,3 +110,56 @@ document.getElementById('add-to-cart').addEventListener('mouseout', function() {
     const cartIcon = this.querySelector('.cart-icon');
     cartIcon.style.transform = 'scale(1)';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buyNowPopup = document.getElementById('buy-now-popup');
+    const closeBuyNow = document.querySelector('.close-buy-now');
+    const buyNowButton = document.getElementById('buy-now');
+    
+    // فتح نافذة الشراء
+    buyNowButton.addEventListener('click', function() {
+        const title = document.getElementById('popup-title').textContent;
+        const price = document.getElementById('popup-price').textContent;
+        const image = document.getElementById('popup-image').src;
+        
+        document.getElementById('buy-now-product-name').textContent = title;
+        document.getElementById('buy-now-product-price').textContent = price;
+        document.getElementById('buy-now-product-image').src = image;
+        
+        buyNowPopup.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+    
+    // إغلاق نافذة الشراء
+    closeBuyNow.addEventListener('click', function() {
+        buyNowPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // التحقق من صحة رقم البطاقة
+    document.getElementById('card-number').addEventListener('input', function(e) {
+        this.value = this.value.replace(/\D/g, '');
+    });
+    
+    // تنسيق تاريخ الانتهاء
+    document.getElementById('expiry').addEventListener('input', function(e) {
+        let value = this.value.replace(/\D/g, '');
+        if (value.length > 2) {
+            value = value.slice(0,2) + '/' + value.slice(2);
+        }
+        this.value = value;
+    });
+    
+    // التحقق من CVV
+    document.getElementById('cvv').addEventListener('input', function(e) {
+        this.value = this.value.replace(/\D/g, '');
+    });
+    
+    // معالجة تأكيد الشراء
+    document.getElementById('confirm-purchase').addEventListener('click', function() {
+        // هنا يمكنك إضافة التحقق من صحة البيانات ومعالجة الطلب
+        alert('Thank you for your purchase!');
+        buyNowPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
