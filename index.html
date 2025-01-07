@@ -81,8 +81,25 @@
                     <div class="football-more"></div>
                     <h2>More Options</h2>
                     <p>Check out the fan area, calendar, and more exciting options!</p>
-                    <a href="more-options.html" class="btn">See More</a>
-                </section>
+
+                    
+                    
+                  
+                    <div class="menu-container" id="menuContainer">
+                      <button class="menu-button" onclick="toggleMenu()">See More</button>
+                      <div class="dropdown-menu" id="dropdownMenu">
+                          <a href="page1.html">Option 1</a>
+                          <a href="page2.html">Option 2</a>
+                          <a href="page3.html">Option 3</a>
+                      </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  </section>
             </div>
         </main>
     </div>
@@ -161,6 +178,11 @@
     </div>
   </footer>
 
-
+<script> 
+  function togglePlayerMenu() {
+    const menu = document.getElementById("playerMenu");
+    menu.classList.toggle("show");
+  }
+</script>
 </html>
 
